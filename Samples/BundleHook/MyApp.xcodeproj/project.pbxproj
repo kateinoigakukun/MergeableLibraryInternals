@@ -14,6 +14,8 @@
 		C40F85012A49DABB00BF215F /* MyUI.h in Headers */ = {isa = PBXBuildFile; fileRef = C40F85002A49DABB00BF215F /* MyUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C40F85042A49DABB00BF215F /* MyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40F84FE2A49DABB00BF215F /* MyUI.framework */; };
 		C40F85052A49DABB00BF215F /* MyUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C40F84FE2A49DABB00BF215F /* MyUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C40F850B2A49DB6E00BF215F /* MyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40F850A2A49DB6E00BF215F /* MyImage.swift */; };
+		C40F850D2A49DC5E00BF215F /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40F850C2A49DC5E00BF215F /* Image.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		C40F84F22A49DA7100BF215F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C40F84FE2A49DABB00BF215F /* MyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40F85002A49DABB00BF215F /* MyUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUI.h; sourceTree = "<group>"; };
+		C40F850A2A49DB6E00BF215F /* MyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImage.swift; sourceTree = "<group>"; };
+		C40F850C2A49DC5E00BF215F /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				C40F85002A49DABB00BF215F /* MyUI.h */,
+				C40F850A2A49DB6E00BF215F /* MyImage.swift */,
+				C40F850C2A49DC5E00BF215F /* Image.xcassets */,
 			);
 			path = MyUI;
 			sourceTree = "<group>";
@@ -180,6 +186,7 @@
 					};
 					C40F84FD2A49DABB00BF215F = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -216,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40F850D2A49DC5E00BF215F /* Image.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40F850B2A49DB6E00BF215F /* MyImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +380,7 @@
 		C40F84F72A49DA7100BF215F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -399,6 +409,7 @@
 		C40F84F82A49DA7100BF215F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -427,6 +438,7 @@
 		C40F85072A49DABB00BF215F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -449,6 +461,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -459,6 +472,7 @@
 		C40F85082A49DABB00BF215F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
