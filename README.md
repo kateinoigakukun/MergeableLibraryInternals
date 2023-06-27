@@ -96,7 +96,7 @@ class_getImageName(Class _Nullable cls)
 However, a statically linked library doesn't have its own image file, so `dyld_image_path_containing_address` returns the linked image file path instead of the static library path.
 This difference makes `Bundle(for: AnyClass)` return a inconsistent path based on how the mergeable library is linked statically or dymamically.
 
-To solve this problem, the Darwin linker synthesizes a piece of code and data into the linked image when linking mergeable framework statically (`-merge_framework`). The linker synthesized code is invoked from [static constructor](https://gcc.gnu.org/onlinedocs/gccint/Initialization.html) and it installs a hook for `class_getImageName` by [`objc_setHook_getImageName`](https://github.com/apple-oss-distributions/objc4/blob/689525d556eb3dee1ffb700423bccf5ecc501dbf/runtime/runtime.h#L1713-L1732).
+To solve this problem, the Darwin linker synthesizes a piece of code and data into the linked image when linking mergeable framework statically (`-merge_framework`). The linker synthesized code is invoked from [static constructor](https://gcc.gnu.org/onlinedocs/gccint/Initialization.html) and it installs a hook for `class_getImageName` by [`objc_setHook_getImageName`](https://github.com/apple-oss-distributions/objc4/blob/689525d556eb3dee1ffb700423bccf5ecc501dbf/runtime/runtime.h#L1713-L1732). This hook is also used for making it understand Swift classes, and also for resolve the framework identity for dyld shared cache.
 
 ```objc
 /**
